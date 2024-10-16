@@ -6,7 +6,7 @@ const STAGGER = 0.025;
 
 function NavBar() {
   return (
-    <nav className="fixed bottom-[7%] right-[5%]">
+    <nav className="fixed bottom-[7%] right-[5%] z-[999]">
       <ul>
         {["About", "Work", "Contact"].map((item, index) => (
           <li key={`link-${index}`}>

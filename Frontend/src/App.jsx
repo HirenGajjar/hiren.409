@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import MainComponent from "./Components/MainComponent/MainComponent";
-import NavBar from "./Components/NavBar/NavBar";
+
 import FullScreenLoader from "./Components/FullScreenLoader.jsx/FullScreenLoader";
 
 const App = () => {
@@ -21,7 +21,6 @@ const App = () => {
           <FullScreenLoader />
         ) : (
           <>
-            <NavBar />
             <MainComponent />
           </>
         )}
