@@ -1,22 +1,24 @@
 import React from "react";
+import FlipLink from "../../AnimationComponents/FlipLink/FlipLink";
+
+const DURATION = 0.25;
+const STAGGER = 0.025;
 
 function NavBar() {
   return (
-    <>
-      <nav className="fixed bottom-[7%] right-[5%]  ">
-        <ul className="">
-          {["About", "Work", "Contact"].map((item, index) => (
-            <li key={`link-${index}`}>
-              <div className="text-right ">
-                <a href={`#${item}`} className="pointer">
-                  <p className="uppercase font-semibold"> {item}</p>
-                </a>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </>
+    <nav className="fixed bottom-[7%] right-[5%]">
+      <ul>
+        {["About", "Work", "Contact"].map((item, index) => (
+          <li key={`link-${index}`}>
+            <div className="text-right">
+              <FlipLink href={`#${item}`} key={index}>
+                {item}
+              </FlipLink>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
 
