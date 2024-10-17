@@ -17,7 +17,7 @@ import {
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 
-import { GrMysql } from "react-icons/gr"; // MySQL uses Gr icon set
+import { GrMysql } from "react-icons/gr";
 
 const ClipPathLinks = () => {
   return (
@@ -45,8 +45,6 @@ const ClipPathLinks = () => {
         <LinkBox Icon={SiPostgresql} href="#" />
         <LinkBox Icon={SiMongodb} href="#" />
         <LinkBox Icon={SiJsonwebtokens} href="#" />
-
-        {/* Reused AWS for database support */}
       </div>
     </div>
   );
