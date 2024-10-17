@@ -29,6 +29,13 @@ const imageData = [
     end: -500,
     className: "ml-24 w-5/12",
   },
+  {
+    src: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "Cybertruck design",
+    start: 450,
+    end: -500,
+    className: "ml-24 w-5/12",
+  },
 ];
 
 const ParallaxImages = () => {

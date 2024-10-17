@@ -4,7 +4,7 @@ import FlipLink from "../../AnimationComponents/FlipLink/FlipLink";
 const DURATION = 0.25;
 const STAGGER = 0.025;
 
-function NavBar({ color }) {
+function NavBar() {
   return (
     <nav className="fixed bottom-[7%] right-[5%] z-[999]">
       <ul>
