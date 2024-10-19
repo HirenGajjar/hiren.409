@@ -42,7 +42,7 @@ const HeroHeader = () => {
       </Canvas>
 
       <h1
-        className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-black-100 font-medium  text-[4rem] md:text-[5rem] lg:text-[6vw] xl:text-[8vw]  pointer-events-none uppercase max-w-[8ch] tracking-tighter text-black"
+        className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-black-100 font-medium  text-[3rem] md:text-[5rem] lg:text-[6vw] xl:text-[8vw]  pointer-events-none uppercase max-w-[8ch] tracking-tighter text-black"
         style={{ lineHeight: "0.75" }}
         animate="true"
       >

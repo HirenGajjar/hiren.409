@@ -4,10 +4,12 @@ import { motion } from "framer-motion";
 const DURATION = 0.25;
 const STAGGER = 0.025;
 
-const FlipIcon = ({ icon, href, index }) => {
+const FlipIcon = ({ icon, href, index, target, rel }) => {
   return (
     <motion.a
       href={href}
+      target={target}
+      rel={rel}
       initial="initial"
       whileHover="hovered"
       className="relative block overflow-hidden text-2xl"

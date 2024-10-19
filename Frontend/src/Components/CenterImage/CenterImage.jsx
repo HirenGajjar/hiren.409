@@ -36,6 +36,8 @@ const CenterImage = () => {
           "url(https://images.pexels.com/photos/270366/pexels-photo-270366.jpeg)",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        margin: 0,
+        padding: 0,
       }}
     />
   );

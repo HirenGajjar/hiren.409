@@ -17,6 +17,8 @@ function SocialMediaIcons() {
       <div className="flex flex-col gap-4">
         {icons.map((item, index) => (
           <FlipIcon
+            target="_blank"
+            rel="noopener noreferrer"
             key={index}
             icon={item.icon}
             href={item.href}
