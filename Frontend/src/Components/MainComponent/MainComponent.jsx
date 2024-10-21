@@ -9,6 +9,7 @@ import HeroHeader from "../Header/HeroHeader";
 import Projects from "../Projects/Projects";
 
 import Headings from "../Headings/Headings";
+import About from "../About/About";
 // import Projects from "../Projects/Projects";
 
 function MainComponent() {
@@ -17,8 +18,8 @@ function MainComponent() {
       <NavBar />
       <SocialMediaIcons />
       {/* <HeroHeader /> */}
-      <HeroSection />
-
+      {/* <HeroSection /> */}
+      <About />
       <SkillsSection />
       <Projects />
     </>

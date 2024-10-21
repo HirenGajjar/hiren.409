@@ -4,6 +4,7 @@ import {
   useTransform,
   motion,
 } from "framer-motion";
+
 const SECTION_HEIGHT = 1500;
 const CenterImage = () => {
   const { scrollY } = useScroll();
@@ -25,21 +26,25 @@ const CenterImage = () => {
   );
 
   return (
-    <motion.div
-      className="sticky top-0 h-screen w-full"
-      style={{
-        clipPath,
-        backgroundSize,
-        opacity,
-        // backgroundColor: "#ff",
-        backgroundImage:
-          "url(https://images.pexels.com/photos/270366/pexels-photo-270366.jpeg)",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        margin: 0,
-        padding: 0,
-      }}
-    />
+    <>
+      <motion.div
+        className="sticky top-0 h-screen w-full"
+        style={{
+          clipPath,
+          backgroundSize,
+          opacity,
+          // backgroundColor: "#ff",
+          backgroundImage:
+            "url(https://images.pexels.com/photos/270366/pexels-photo-270366.jpeg)",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          margin: 0,
+          padding: 0,
+        }}
+      />
+
+      <motion.div />
+    </>
   );
 };
 
