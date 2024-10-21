@@ -3,7 +3,7 @@ const MAX_RADIUS = 15;
 const DEPTH = 2;
 const LEFT_COLOR = "#000";
 const RIGHT_COLOR = "#000";
-const NUM_POINTS = 2500;
+const NUM_POINTS = window.innerWidth > 1200 ? 2500 : 1000;
 
 const getGradientStop = (ratio) => {
   ratio = ratio > 1 ? 1 : ratio < 0 ? 0 : ratio;
