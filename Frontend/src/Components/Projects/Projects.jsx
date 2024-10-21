@@ -1,7 +1,11 @@
 import React from "react";
 
 function Projects() {
-  return <div>Projects</div>;
+  return (
+    <>
+      <div id="Work" className="h-screen w-full" ></div>
+    </>
+  );
 }
 
 export default Projects;

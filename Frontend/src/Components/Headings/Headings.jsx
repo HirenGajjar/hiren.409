@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee";
 
-function Headings({ heading, direction }) {
+function Headings({ heading, direction, textColor }) {
   const [speed, setSpeed] = useState(350);
-  const repeatedWord = `\u00A0\u00A0${heading}\u00A0\u00A0`.repeat(1000).trim();
+  const repeatedWord = `\u00A0\u00A0${heading}\u00A0\u00A0`
+    .repeat(100000)
+    .trim();
   const updateSpeed = () => {
     if (window.innerWidth < 640) {
       setSpeed(50);
@@ -27,9 +29,12 @@ function Headings({ heading, direction }) {
       <Marquee
         speed={speed}
         direction={`${direction}`}
-        className="overflow-hidden"
+        className="overflow-hidden "
       >
-        <h2 className="font-poppins uppercase text-3xl md:text-6xl lg:text-8xl  py-4">
+        <h2
+          style={{ color: `${textColor}` }}
+          className="font-poppins uppercase text-3xl md:text-6xl lg:text-8xl  py-4"
+        >
           {repeatedWord}
         </h2>
       </Marquee>

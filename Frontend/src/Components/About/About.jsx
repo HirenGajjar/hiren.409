@@ -1,20 +1,17 @@
-import React from "react";
-import Headings from "../Headings/Headings";
+import React, { useEffect } from "react";
 
-function About() {
+import Headings from "../Headings/Headings";
+import HoverImage from "../../AnimationComponents/HoverImage/HoverImage";
+const About = () => {
   return (
-    <>
-      <div className="w-full h-screen bg-black text-white flex flex-col py-12">
-        <Headings heading="About" direction="right" />
-        <p className="max-w-[80%] mx-auto text-2xl my-12">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-          repudiandae qui cupiditate illum maxime minus blanditiis id beatae
-          ullam magni reprehenderit consequuntur, eaque quo repellat officia
-          aliquid veniam, vitae assumenda.
-        </p>
-      </div>
-    </>
+    <div
+      id="About"
+      className="flex flex-col h-screen w-full py-12 wrapper overflow-hidden"
+    >
+      <Headings heading="About" direction="right" textColor="black" />
+      <HoverImage hoverImageUrl="https://i.seadn.io/gae/eMQWSb9NyPpFZoTeE8nFqgdWPEAfrmAivEFgbiKAvkYhUNqRTwa5ofZspMG0qJVBajgIqiwTm9FnWQ0ZdVVaZ04j5Dp12NcSzSM7iw?auto=format&dpr=1&w=1000" />
+    </div>
   );
-}
+};
 
 export default About;
