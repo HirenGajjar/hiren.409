@@ -18,6 +18,7 @@ function MainComponent() {
       {/* <HeroSection /> */}
       <About />
       <SkillsSection />
+
       <Projects />
     </>
   );
