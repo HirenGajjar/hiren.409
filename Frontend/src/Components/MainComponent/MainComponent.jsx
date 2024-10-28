@@ -8,12 +8,14 @@ import HeroHeader from "../Header/HeroHeader";
 
 import About from "../About/About";
 import Projects from "../Projects/Projects";
+import HeroImageScroll from "../HeroImageScroll/HeroImageScroll";
 
 function MainComponent() {
   return (
     <>
       <NavBar />
       <SocialMediaIcons />
+      <HeroImageScroll />
       {/* <HeroHeader /> */}
       {/* <HeroSection /> */}
       <About />

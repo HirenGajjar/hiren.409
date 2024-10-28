@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-function HoverImage({ hoverImageUrl }) {
+function HoverImage() {
   useEffect(() => {
     const cursorImage = document.getElementById("cursorImage");
     let timer;
@@ -32,10 +32,10 @@ function HoverImage({ hoverImageUrl }) {
     <>
       <img
         id="cursorImage"
-        src={`${hoverImageUrl}`}
-        alt=""
+        src="../../Resources/hiren.jpg"
+        alt="Hiren Image"
         className="absolute w-72 transition-transform duration-100 ease-in-out pointer-events-none"
-        style={{ display: "none" }}
+        style={{ display: "none", borderRadius: "20px" }}
       />
     </>
   );
