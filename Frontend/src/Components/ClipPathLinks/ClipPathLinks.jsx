@@ -23,28 +23,28 @@ const ClipPathLinks = () => {
   return (
     <div className="divide-y divide-neutral-900 border border-neutral-900">
       <div className="grid grid-cols-2 divide-x divide-neutral-900">
-        <LinkBox Icon={SiNodedotjs} href="#" />
-        <LinkBox Icon={SiTypescript} href="#" />
+        <LinkBox Icon={SiNodedotjs} />
+        <LinkBox Icon={SiTypescript} />
       </div>
       <div className="grid grid-cols-3 divide-x divide-neutral-900">
-        <LinkBox Icon={SiGit} href="#" />
-        <LinkBox Icon={SiDocker} href="#" />
-        <LinkBox Icon={FaAws} href="#" />
+        <LinkBox Icon={SiGit} />
+        <LinkBox Icon={SiDocker} />
+        <LinkBox Icon={FaAws} />
       </div>
       <div className="grid grid-cols-2 divide-x divide-neutral-900">
-        <LinkBox Icon={SiReact} href="#" />
-        <LinkBox Icon={SiNextdotjs} href="#" />
+        <LinkBox Icon={SiReact} />
+        <LinkBox Icon={SiNextdotjs} />
       </div>
       <div className="grid grid-cols-3 divide-x divide-neutral-900">
-        <LinkBox Icon={SiTailwindcss} href="#" />
-        <LinkBox Icon={SiBootstrap} href="#" />
-        <LinkBox Icon={SiSass} href="#" />
+        <LinkBox Icon={SiTailwindcss} />
+        <LinkBox Icon={SiBootstrap} />
+        <LinkBox Icon={SiSass} />
       </div>
       <div className="grid grid-cols-4 divide-x divide-neutral-900">
-        <LinkBox Icon={GrMysql} href="#" />
-        <LinkBox Icon={SiPostgresql} href="#" />
-        <LinkBox Icon={SiMongodb} href="#" />
-        <LinkBox Icon={SiJsonwebtokens} href="#" />
+        <LinkBox Icon={GrMysql} />
+        <LinkBox Icon={SiPostgresql} />
+        <LinkBox Icon={SiMongodb} />
+        <LinkBox Icon={SiJsonwebtokens} />
       </div>
     </div>
   );

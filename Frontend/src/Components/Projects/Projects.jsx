@@ -8,10 +8,6 @@ function Projects() {
       <div id="Work" className="">
         <LargeHeadingWithImage />
         <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
       </div>
     </>
   );

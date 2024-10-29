@@ -44,8 +44,9 @@ function FullScreenLoader() {
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 100, opacity: 0 }}
         transition={{ type: "spring", stiffness: 100 }}
-        className="text-4xl"
+        className="text-4xl flex items-center gap-10"
       >
+        <div className="ml-4 bg-green-300 w-[20px] h-[20px] rounded-full"></div>
         {currentLanguage}
       </motion.div>
     </div>

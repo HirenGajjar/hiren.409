@@ -9,12 +9,13 @@ import HeroHeader from "../Header/HeroHeader";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
 import HeroImageScroll from "../HeroImageScroll/HeroImageScroll";
-
+import Footer from "../Footer/Footer";
 function MainComponent() {
   return (
     <>
       <NavBar />
       <SocialMediaIcons />
+
       <HeroImageScroll />
       {/* <HeroHeader /> */}
       {/* <HeroSection /> */}
@@ -22,6 +23,7 @@ function MainComponent() {
       <SkillsSection />
 
       <Projects />
+      <Footer />
     </>
   );
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import Headings from "../Headings/Headings";
 import HoverImage from "../../AnimationComponents/HoverImage/HoverImage";
+import TextAnimation from "../../AnimationComponents/TextAnimation/TextAnimation";
 const About = () => {
   return (
     <div
@@ -10,6 +11,8 @@ const About = () => {
     >
       <Headings heading="About" direction="right" textColor="black" />
       <HoverImage />
+
+      <TextAnimation />
     </div>
   );
 };
