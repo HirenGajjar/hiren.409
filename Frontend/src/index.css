@@ -4,7 +4,7 @@
 
 ::-webkit-scrollbar {
     display: none;
-  }
+}
 
 html {
     scroll-behavior: smooth;
@@ -15,4 +15,8 @@ html {
     body {
         @apply font-montserrat;
     }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'poppins';
 }
