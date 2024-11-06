@@ -18,7 +18,7 @@ const Project = () => {
           heading="Design System"
           subheading="Component based design system"
           imgSrc="https://www.idsa.org/wp-content/uploads/2023/07/IDEA2023_Starbucks-Pro-Design-System.png"
-          href="#"
+          href="https://outbacknursery.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
         />
@@ -157,7 +157,7 @@ const Link = ({
         transition={{ type: "spring" }}
         className="relative z-10 p-4"
       >
-        <FiArrowRight className="text-5xl text-neutral-50" />
+        <FiArrowRight className="text-5xl " />
       </motion.div>
     </motion.a>
   );
