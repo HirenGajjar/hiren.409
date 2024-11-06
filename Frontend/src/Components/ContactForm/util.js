@@ -8,18 +8,18 @@ export const handleInputChange = (e, formData, setFormData) => {
   });
 };
 
-export const handleFormSubmit = async (e, formData, setFormData, setStatus) => {
+export const handleFormSubmit = async (e, formData, setFormData) => {
   e.preventDefault();
   try {
     await axios.post("http://localhost:5000/api/messages", formData);
-    setStatus("Message sent successfully!");
     setFormData({
       name: "",
       email: "",
       message: "",
     });
+    return "success";
   } catch (error) {
-    setStatus("Error sending message. Please try again.");
+    return "error";
   }
 };
 
