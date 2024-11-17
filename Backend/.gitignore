@@ -35,4 +35,4 @@ build/
 
 #Package files
 package-lock.json
-package.json
+# package.json
