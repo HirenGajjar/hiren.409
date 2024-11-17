@@ -15,4 +15,11 @@ app.use(cors({ origin: "http://localhost:5173" }));
 app.use(bodyParser.json());
 app.use("/api/messages", messagesRoute);
 // Backend server
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {
+  try {
+    console.log(`Server running on port ${PORT}`);
+  } catch (error) {
+    console.error("Error starting server:", error);
+    process.exit(1);
+  }
+});
