@@ -38,3 +38,5 @@ dist-ssr
 # Ignore package files
 package.json
 package-lock.json
+# Ignore dist folder
+/dist
