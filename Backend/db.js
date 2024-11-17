@@ -7,7 +7,7 @@ const connectDB = async () => {
     //   useUnifiedTopology: true,
     // });
     await mongoose.connect(
-      "mongodb+srv://Hiren3398:Hiren3398@409.dainb.mongodb.net/?retryWrites=true&w=majority&appName=409",
+      "mongodb+srv://Hiren3398:Hiren@409.dainb.mongodb.net/?retryWrites=true&w=majority&appName=409",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
