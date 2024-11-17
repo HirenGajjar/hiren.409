@@ -11,7 +11,7 @@ export const handleInputChange = (e, formData, setFormData) => {
 export const handleFormSubmit = async (e, formData, setFormData) => {
   e.preventDefault();
   try {
-    await axios.post("http://localhost:5000/api/messages", formData);
+    await axios.post("https://hiren-409.onrender.com/api/messages/", formData);
     setFormData({
       name: "",
       email: "",
