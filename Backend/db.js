@@ -6,10 +6,13 @@ const connectDB = async () => {
     //   useNewUrlParser: true,
     //   useUnifiedTopology: true,
     // });
-    await mongoose.connect("mongodb://localhost:27017/hiren_409_messages", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(
+      "mongodb+srv://Hiren3398:Hiren3398@409.dainb.mongodb.net/?retryWrites=true&w=majority&appName=409",
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
 
     //mongodb://localhost:27017/hiren_409_messages
     console.log("Database connected!");
