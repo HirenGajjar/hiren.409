@@ -11,7 +11,7 @@ dotenv.config();
 // Connect to Database
 connectDB();
 //Middlewares
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({ origin: "https://hiren-409.vercel.app/" }));
 app.use(bodyParser.json());
 app.use("/api/messages", messagesRoute);
 // Backend server
