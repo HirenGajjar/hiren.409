@@ -12,12 +12,7 @@ dotenv.config();
 // Connect to Database
 connectDB();
 //Middlewares
-app.use(
-  cors({
-    origin: "https://hirengajjar.onrender.com/",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
+app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 app.use("/api/messages", messagesRoute);
 // Backend server
