@@ -7,11 +7,17 @@ const PORT = process.env.PORT || 5000;
 const messagesRoute = require("./Routes/message.js");
 const connectDB = require("./db");
 // Configs
+app.use(express.json());
 dotenv.config();
 // Connect to Database
 connectDB();
 //Middlewares
-app.use(cors({ origin: "https://hirengajjar.onrender.com/" }));
+app.use(
+  cors({
+    origin: "https://hirengajjar.onrender.com/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 app.use(bodyParser.json());
 app.use("/api/messages", messagesRoute);
 // Backend server
