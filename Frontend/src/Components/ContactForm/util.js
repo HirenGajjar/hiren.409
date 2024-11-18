@@ -13,7 +13,12 @@ export const handleFormSubmit = async (e, formData, setFormData) => {
   try {
     const response = await axios.post(
       "https://hiren-409.onrender.com/api/messages/",
-      formData
+      formData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
     );
     console.log("Response:", response);
     setFormData({

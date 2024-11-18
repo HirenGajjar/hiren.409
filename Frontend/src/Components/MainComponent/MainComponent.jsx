@@ -10,6 +10,7 @@ import About from "../About/About";
 import Projects from "../Projects/Projects";
 import HeroImageScroll from "../HeroImageScroll/HeroImageScroll";
 import Footer from "../Footer/Footer";
+
 function MainComponent() {
   return (
     <>
@@ -20,6 +21,7 @@ function MainComponent() {
       {/* <HeroHeader /> */}
       {/* <HeroSection /> */}
       <About />
+
       <SkillsSection />
 
       <Projects />

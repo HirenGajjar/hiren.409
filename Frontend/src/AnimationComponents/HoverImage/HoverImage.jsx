@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import hirenImage from "../../../Resources/hiren.jpg";
 
 function HoverImage() {
   useEffect(() => {
@@ -20,19 +21,25 @@ function HoverImage() {
     };
 
     const wrapper = document.querySelector(".wrapper");
-    wrapper.addEventListener("mousemove", handleMouseMove);
-    wrapper.addEventListener("mouseleave", handleMouseLeave);
+
+    if (wrapper) {
+      wrapper.addEventListener("mousemove", handleMouseMove);
+      wrapper.addEventListener("mouseleave", handleMouseLeave);
+    }
 
     return () => {
-      wrapper.removeEventListener("mousemove", handleMouseMove);
-      wrapper.removeEventListener("mouseleave", handleMouseLeave);
+      if (wrapper) {
+        wrapper.removeEventListener("mousemove", handleMouseMove);
+        wrapper.removeEventListener("mouseleave", handleMouseLeave);
+      }
     };
   }, []);
+
   return (
     <>
       <img
         id="cursorImage"
-        src="../../Resources/hiren.jpg"
+        src={hirenImage}
         alt="Hiren Image"
         className="absolute w-72 transition-transform duration-100 ease-in-out pointer-events-none"
         style={{ display: "none", borderRadius: "20px" }}
