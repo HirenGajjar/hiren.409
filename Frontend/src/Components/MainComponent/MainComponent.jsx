@@ -3,7 +3,7 @@ import SocialMediaIcons from "../SocialMediaIcons/SocialMediaIcons";
 import NavBar from "../NavBar/NavBar";
 import HeroSection from "../HeroSection/HeroSection";
 import SkillsSection from "../SkillsSection/SkillsSection";
-
+import Testimonials from "../Testimonials/Testimonials";
 import HeroHeader from "../Header/HeroHeader";
 
 import About from "../About/About";
@@ -25,6 +25,7 @@ function MainComponent() {
       <SkillsSection />
 
       <Projects />
+      <Testimonials />
       <Footer />
     </>
   );
