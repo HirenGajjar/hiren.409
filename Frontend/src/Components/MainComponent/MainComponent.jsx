@@ -5,7 +5,7 @@ import HeroSection from "../HeroSection/HeroSection";
 import SkillsSection from "../SkillsSection/SkillsSection";
 import Testimonials from "../Testimonials/Testimonials";
 import HeroHeader from "../Header/HeroHeader";
-
+import HorizontalScrollCarousel from "../HorizontalScrollCarousel/HorizontalScrollCarousel";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
 import HeroImageScroll from "../HeroImageScroll/HeroImageScroll";
@@ -20,7 +20,8 @@ function MainComponent() {
       <HeroImageScroll />
       {/* <HeroHeader /> */}
       {/* <HeroSection /> */}
-      <About />
+      {/* <About /> */}
+      <HorizontalScrollCarousel />
 
       <SkillsSection />
 
