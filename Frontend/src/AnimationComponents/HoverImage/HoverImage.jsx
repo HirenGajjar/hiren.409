@@ -41,7 +41,7 @@ function HoverImage() {
         id="cursorImage"
         src={hirenImage}
         alt="Hiren Image"
-        className="absolute w-72 transition-transform duration-100 ease-in-out pointer-events-none"
+        className="absolute w-72 transition-transform duration-100 ease-in-out pointer-events-none z-[999]"
         style={{ display: "none", borderRadius: "20px" }}
       />
     </>

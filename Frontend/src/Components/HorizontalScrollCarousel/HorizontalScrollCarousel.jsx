@@ -4,11 +4,11 @@ import { useRef, useState, useEffect } from "react";
 const Example = () => {
   return (
     <div id="About" className="bg-white">
-      <div className="flex h-48 items-center justify-center">
+      {/* <div className="flex h-48 items-center justify-center">
         <h2 className="font-poppins uppercase text-3xl  mx-auto md:text-6xl lg:text-8xl   text-black">
           About
         </h2>
-      </div>
+      </div> */}
       <HorizontalScrollCarousel />
     </div>
   );
@@ -27,6 +27,7 @@ const HorizontalScrollCarousel = () => {
   useEffect(() => {
     const updateCardWidth = () => {
       const width = window.innerWidth;
+
       setCardWidth(width);
     };
 
@@ -48,7 +49,6 @@ const HorizontalScrollCarousel = () => {
             x,
             width: `${totalWidth}px`,
             display: "flex",
-            gap: "1rem",
           }}
           className="flex"
         >
@@ -68,21 +68,19 @@ const Card = ({ card, cardWidth }) => {
       className="group font-montserrat relative h-screen overflow-hidden "
       style={{ width: `${cardWidth}px` }}
     >
-      <div className="absolute inset-0 z-0 "></div>
-      <div className="absolute inset-0 z-10 flex flex-col justify-center p-6 text-center text-black">
-        <p className="text-4xl font-bold">{card.title}</p>
-        <p className="text-xl font-medium text-black">{card.subtitle}</p>
+      <div
+        className="absolute left-[10px] top-[200px] border-t-2 border-black pt-4"
+        style={{ transform: "rotate(90deg)" }}
+      >
+        <p className="lg:text-4xl text-2xl">{card.title}</p>
       </div>
-      <motion.div
-        style={{
-          backgroundImage: `url(${
-            card.url || "https://via.placeholder.com/450"
-          })`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-      ></motion.div>
+      <div className="absolute left-[150px]  top-[130px]">
+        <img
+          src={`${card.img}`}
+          className=" lg:w-[400px] lg:h-[250px] "
+          alt="Image"
+        />
+      </div>
     </div>
   );
 };
@@ -92,32 +90,37 @@ export default Example;
 const cards = [
   {
     title: "2024-2022",
-    subtitle: "Life in Canada (Post-Graduate Studies)",
+    subtitle: "Post-Graduate Studies",
     id: 1,
-    url: "https://source.unsplash.com/450x450/?canada",
+    para: "I came to canada in 2022 to complete the Post Graduate in Web design and Development from North Island College.",
+    img: "https://www.nic.bc.ca/posts/images/5690-nic-cv-campus-resized.jpg",
   },
   {
     title: "2022-2020",
     subtitle: "Software Engineer",
     id: 2,
-    url: "https://source.unsplash.com/450x450/?software,engineer",
+    para: "Back in India, I used to work for Atlas Tech as a Software Engineer.",
+    img: "https://codeop.tech/wp-content/uploads/2023/11/arpad-czapp-H424WdcQN4Y-unsplash-scaled.jpg",
   },
   {
     title: "2020-2016",
     subtitle: "Bachelor's of Engineering",
     id: 3,
-    url: "https://source.unsplash.com/450x450/?engineering,graduation",
+    para: "I Completed by bachelor of computer engineering in 2020 from Gujarat University.",
+    img: "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/p4/9999pxx79.xx79.110713113430.i6p4/catalogue/indus-institute-of-technology-and-engineering-kalol-gandhinagar-gujarat-colleges-7bwoata.jpg",
   },
   {
     title: "2016-2014",
     subtitle: "High School",
     id: 4,
-    url: "https://source.unsplash.com/450x450/?highschool,learning",
+    para: "",
+    img: "https://d3lzcn6mbbadaf.cloudfront.net/media/details/nepal-india_project_november_9.jpg",
   },
   {
-    title: "2014 and Before",
+    title: "2014",
     subtitle: "Schooling",
     id: 5,
-    url: "https://source.unsplash.com/450x450/?childhood,dreams",
+    para: "",
+    img: "https://www.podareducation.org/Uploads/content/2022-10-17--10-52-31-14_How-To-Select-The-Perfect-International-School-In-Gujarat-banner.jpg",
   },
 ];
