@@ -7,8 +7,7 @@ const PORT = process.env.PORT || 5000;
 const messagesRoute = require("./Routes/message.js");
 const connectDB = require("./db");
 const getMessage = require("./Middleware/getMessage.js");
-const adminRoute = require("./Routes/admin.js");
-
+const adminRoute = require("./Routes/adminRoute.js");
 // Configs
 app.use(express.json());
 dotenv.config();
@@ -42,8 +41,9 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use("/api/messages", messagesRoute);
 app.use("/api/admin/messages", getMessage);
-//Admin
+//Admin Route
 app.use("/api/admin", adminRoute);
+
 // Backend server
 app.listen(PORT, () => {
   try {
