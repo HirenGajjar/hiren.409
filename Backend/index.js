@@ -17,10 +17,11 @@ connectDB();
 
 // CORS Configuration
 const allowedOrigins = [
-  "https://hirengajjar.onrender.com", // Your deployed frontend
-  "http://localhost:5173", // Local development frontend (if needed)
+  "https://hirengajjar.onrender.com",
+  "http://localhost:5173",
+  "*",
 ];
-
+//CORS
 const corsOptions = {
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl requests)
