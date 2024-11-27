@@ -1,4 +1,3 @@
-// ContactForm.js
 import React, { useState, useRef, useEffect } from "react";
 import {
   handleInputChange,
@@ -14,6 +13,7 @@ const ContactForm = () => {
     message: "",
   });
   const [toastMessage, setToastMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false); // To manage button disabled state
   const buttonRef = useRef(null);
 
   useEffect(() => {
@@ -22,12 +22,17 @@ const ContactForm = () => {
   }, []);
 
   const onSubmit = async (e) => {
+    setIsSubmitting(true); // Disable the button while submitting
     const result = await handleFormSubmit(e, formData, setFormData);
+    setIsSubmitting(false); // Re-enable the button
+
     if (result === "success") {
       setToastMessage("Message sent successfully!");
     } else {
       setToastMessage("Error sending message. Please try again.");
     }
+
+    // Hide toast message after 3 seconds
     setTimeout(() => setToastMessage(""), 3000);
   };
 
@@ -40,7 +45,7 @@ const ContactForm = () => {
             type="text"
             name="name"
             className="text-black outline-none text-center"
-            placeholder="enter your name"
+            placeholder="Enter your name"
             value={formData.name}
             onChange={(e) => handleInputChange(e, formData, setFormData)}
             required
@@ -74,13 +79,18 @@ const ContactForm = () => {
             ref={buttonRef}
             type="submit"
             className="relative px-6 py-3 mt-4 border-2 border-black text-black uppercase tracking-wide overflow-hidden"
+            disabled={isSubmitting} // Disable the button while submitting
           >
-            <span className="relative z-10">Send Message</span>
+            <span className="relative z-10">
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </span>
             <span className="absolute inset-0 bg-black transition-transform duration-300 ease-in-out transform scale-x-0 origin-left" />
           </button>
         </div>
       </form>
-      <Toast message={toastMessage} onClose={() => setToastMessage("")} />
+      {toastMessage && (
+        <Toast message={toastMessage} onClose={() => setToastMessage("")} />
+      )}
     </div>
   );
 };

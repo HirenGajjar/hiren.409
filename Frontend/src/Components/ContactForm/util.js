@@ -1,5 +1,6 @@
 import axios from "axios";
 
+// Handle form input change
 export const handleInputChange = (e, formData, setFormData) => {
   const { name, value } = e.target;
   setFormData({
@@ -8,6 +9,7 @@ export const handleInputChange = (e, formData, setFormData) => {
   });
 };
 
+// Handle form submission
 export const handleFormSubmit = async (e, formData, setFormData) => {
   e.preventDefault();
   try {
@@ -28,10 +30,12 @@ export const handleFormSubmit = async (e, formData, setFormData) => {
     });
     return "success";
   } catch (error) {
+    console.error("Error sending message:", error);
     return "error";
   }
 };
 
+// Button hover animation
 export const setupButtonHoverAnimation = (buttonRef) => {
   const button = buttonRef.current;
   const bgEffect = button.querySelector("span:nth-child(2)");
