@@ -1,5 +1,5 @@
 const Message = require("../Models/message.js");
-
+const { verifyToken } = require("../Middleware/adminMiddleware.js");
 const getMessage = async (req, res) => {
   try {
     const messages = await Message.find();

@@ -4,7 +4,7 @@ const {
   signup,
   login,
 } = require("../Middleware/adminMiddleware.js");
-
+const getMessage = require("../Middleware/getMessage.js");
 const router = express.Router();
 
 // Admin Signup Route
@@ -18,4 +18,7 @@ router.get("/protected", verifyToken, (req, res) => {
   res.status(200).json({ message: "You are authorized!", user: req.user });
 });
 
+//Get all the messages
+
+router.get("/allmessages", verifyToken, getMessage);
 module.exports = router;

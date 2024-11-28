@@ -1,6 +1,9 @@
 const Admin = require("../Models/adminModel.js");
 const jwt = require("jsonwebtoken");
-const SECRET_KEY = "SECRET_KEY";
+const bcrypt = require("bcryptjs");
+
+// Hardcoded secret key
+const SECRET_KEY = "your-secret-key"; // Change this key to something more secure!
 
 // Middleware to verify JWT Token
 const verifyToken = (req, res, next) => {
@@ -31,7 +34,10 @@ const signup = async (req, res) => {
       return res.status(400).json({ message: "Username already exists" });
     }
 
-    const newAdmin = new Admin({ username, password });
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    const newAdmin = new Admin({ username, password: hashedPassword });
     await newAdmin.save();
     res.status(201).json({ message: "Admin created successfully" });
   } catch (error) {
@@ -49,7 +55,7 @@ const login = async (req, res) => {
       return res.status(404).json({ message: "Admin not found" });
     }
 
-    const isPasswordValid = await admin.isPasswordValid(password);
+    const isPasswordValid = await bcrypt.compare(password, admin.password);
     if (!isPasswordValid) {
       return res.status(401).json({ message: "Invalid credentials" });
     }
