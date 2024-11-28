@@ -19,6 +19,7 @@ connectDB();
 const allowedOrigins = [
   "https://hirengajjar.onrender.com",
   "http://localhost:5173",
+  "https://four09-admin.onrender.com/",
   "*",
 ];
 //CORS
