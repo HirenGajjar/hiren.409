@@ -19,10 +19,10 @@ connectDB();
 const allowedOrigins = [
   "https://hirengajjar.onrender.com",
   "http://localhost:5173",
-  "https://four09-admin.onrender.com/",
-  "*",
+  "https://four09-admin.onrender.com", // Fixed origin
 ];
-//CORS
+
+// CORS Options
 const corsOptions = {
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl requests)
@@ -34,6 +34,8 @@ const corsOptions = {
   },
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
+  preflightContinue: false, // Disable preflight Continue to handle preflight manually
+  optionsSuccessStatus: 200, // Success status for OPTIONS request (to fix some old browsers)
 };
 
 app.use(cors(corsOptions));
@@ -42,7 +44,7 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use("/api/messages", messagesRoute);
 app.use("/api/admin/messages", getMessage);
-//Admin Route
+// Admin Route
 app.use("/api/admin", adminRoute);
 
 // Backend server
