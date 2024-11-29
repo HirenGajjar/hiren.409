@@ -7,11 +7,7 @@
    - [Problem Statement](#problem-statement)
    - [Solution](#solution)
 
-<<<<<<< HEAD
-2. [Learning Objectives](#learning-objectives)
-=======
 2. [Learning Objective](#learning-objectives)
->>>>>>> 854b00351d942661aaffe258eac9db20cd4617a7
 
 3. [Key Performance Indicators (KPIs)](#key-performance-indicators-kpis)
 
@@ -19,13 +15,11 @@
 
 5. [Site Map](#site-map)
 
-6. [Challenges and Learnings](#challenges-and-learnings)
+6. [Conclusion](#conclusion)
 
-<<<<<<< HEAD
 ## Project Summary
-=======
+
 ## 1. Project Summary
->>>>>>> 854b00351d942661aaffe258eac9db20cd4617a7
 
 Hiren Gajjar’s portfolio website addresses a key challenge faced by fresh developers in the competitive tech industry: demonstrating their technical abilities and readiness for professional opportunities without prior industry experience. As a front-end developer, Hiren identified the need for a dedicated platform to showcase his practical skills, academic projects, and problem-solving approach in a professional and cohesive manner. With no formal experience in the industry yet, the
 goal of this portfolio is to bridge the gap between theoretical knowledge and real-world application, offering a comprehensive view of his capabilities.
@@ -58,19 +52,17 @@ To address this challenge, I will create a high-performance, visually appealing 
 
 ---
 
-<<<<<<< HEAD
 ## Learning Objectives
 
 Enact a performance optimization testing plan that includes research into framework-specific tools, and adapting performance optimization techniques, demonstrated through complete documentation that identifies design and development choices made due to results of the performance optimization process.
 
 ## Key Performance Indicators (KPIs)
-=======
+
 ## 2. Learning Objectives
 
 Enact a performance optimization testing plan that includes research into framework-specific tools, and adapting performance optimization techniques, demonstrated through complete documentation that identifies design and development choices made due to results of the performance optimization process.
 
 ## 4. Key Performance Indicators
->>>>>>> 854b00351d942661aaffe258eac9db20cd4617a7
 
 ### a. Performance Optimization
 
@@ -107,11 +99,9 @@ Steve Krug noted in Don't Make Me Think, 'A good design should be accessible to 
 
 Ultimately, the aim of a website or portfolio site should be to provide authentic and relevant information, integrate social media effectively, showcase proof of work, and include other important resources. It is crucial to present content in the right hierarchy to deliver thorough and clear information to users, potential clients, or employers. Additionally, a well-organized portfolio can help build a strong professional network over time. Although there are no clear measurements for such indicators, these criteria play a vital role in the success and effectiveness of a portfolio site.
 
-<<<<<<< HEAD
 ## Competitive Analysis
-=======
+
 ### 4. Competitive Analysis
->>>>>>> 854b00351d942661aaffe258eac9db20cd4617a7
 
 #### 1. Dennis Snellenberg
 
@@ -174,8 +164,11 @@ Ultimately, the aim of a website or portfolio site should be to provide authenti
 1. Slow and takes time to load
 2. Too many colors
 3. Difficult to navigate
-<<<<<<< HEAD
 
 ## Site Map
-=======
->>>>>>> 854b00351d942661aaffe258eac9db20cd4617a7
+
+![Sitemap](Resources/Sitemap.png)
+
+## Conclusion
+
+The portfolio project by Hiren Gajjar aims to address the critical challenge faced by new developers in effectively showcasing their skills and experience to potential employers. By developing a high-performance, responsive portfolio website, Hiren will not only present his technical expertise but also demonstrate his ability to apply best practices in front-end development. This strategic tool will serve to enhance Hiren's visibility in the competitive tech job market and position him as a promising candidate ready to take on professional challenges. Through thoughtful design and careful consideration of user needs, the portfolio will bridge the gap between theoretical knowledge and practical application, ensuring that Hiren stands out in his journey towards securing a role in front-end development.
